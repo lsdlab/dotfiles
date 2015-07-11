@@ -36,7 +36,7 @@ CASE_SENSITIVE="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="yyyy/mm/dd"
+# HIST_STAMPS="yyyy/mm/dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -45,7 +45,7 @@ HIST_STAMPS="yyyy/mm/dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx autojump rake gem bundler ruby rbenv rvm rails sublime autopep8 brew brew-cask cabal django fabric git git-flow git-extras github gitignore go golang grunt heroku history httpie marked2 node npm pep8 pip postgres pod pyenv pylint python redis-cli rsync supervisor tmux vundle xcode gnu-utils iwhois virtualenv virtualenvwrapper vundle zsh_reload)
+plugins=(osx autojump rake gem bundler ruby rbenv rails sublime autopep8 brew brew-cask cabal django fabric git git-flow git-extras github gitignore go golang grunt heroku history httpie marked2 node npm pep8 pip postgres pod pyenv pylint python redis-cli rsync supervisor tmux vundle xcode gnu-utils virtualenv virtualenvwrapper vundle)
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -74,8 +74,6 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-alias zshconfig="vi ~/.zshrc"
 
 
 
@@ -87,6 +85,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# python
+alias p="python"
+
 # virtualenvwrapper settings
 export WORKON_HOME=/Users/Chen/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -95,10 +96,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# nvm settings
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # GOPATH setting
 export GOPATH=/Users/Chen/GO
@@ -147,9 +144,6 @@ alias cd5="cd ../../../../.."
 
 # alias mkdircd
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
-
-# alias rm protection
-alias rm="rm -i"
 
 # alias macvim replace vim
 alias vi="mvim"

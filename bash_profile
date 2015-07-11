@@ -9,14 +9,13 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export WORKON_HOME=/Users/Chen/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
+# python
+alias p="python"
+
 # pyenv settings
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# nvm settings
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # GOPATH setting
 export GOPATH=/Users/Chen/GO
@@ -74,16 +73,6 @@ alias vim="mvim"
 
 # alias Linode Tokyo VPS quick connect
 alias ctrl="ssh linode"
-
-
-
-
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/Chen/google-cloud-sdk/path.bash.inc'
-
-# The next line enables bash completion for gcloud.
-source '/Users/Chen/google-cloud-sdk/completion.bash.inc'
 
 
 
