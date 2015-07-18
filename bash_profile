@@ -5,12 +5,13 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# python
+alias p="python"
+
 # virtualenvwrapper settings
 export WORKON_HOME=/Users/Chen/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-# python
-alias p="python"
 
 # pyenv settings
 export PYENV_ROOT="$HOME/.pyenv"

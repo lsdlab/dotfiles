@@ -77,6 +77,8 @@ export LANG=en_US.UTF-8
 
 
 
+# zsh-completion
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Homebrew settings
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
