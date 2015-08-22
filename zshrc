@@ -20,7 +20,7 @@ CASE_SENSITIVE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -31,7 +31,7 @@ CASE_SENSITIVE="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -45,7 +45,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx autojump rake gem bundler ruby rbenv rails sublime autopep8 brew brew-cask cabal django fabric git git-flow git-extras github gitignore go golang grunt heroku history httpie marked2 node npm pep8 pip postgres pod pyenv pylint python redis-cli rsync supervisor tmux vundle xcode gnu-utils virtualenv virtualenvwrapper vundle)
+plugins=(osx autojump rake gem bundler ruby rbenv rails sublime autopep8 brew brew-cask cabal django fabric git git-flow git-extras github gitignore go golang grunt heroku history httpie marked2 node npm pep8 pip postgres pod pyenv pylint python redis-cli rsync supervisor tmux vundle xcode gnu-utils virtualenv virtualenvwrapper )
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -115,9 +115,9 @@ alias fuck='$(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
 
 # mysql alias quick command
-alias mysqlstart="sudo /usr/local/Cellar/mysql/5.6.25/bin/mysql.server start"
-alias mysqlstop="sudo /usr/local/Cellar/mysql/5.6.25/bin/mysql.server stop"
-alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.6.25/bin/mysql.server restart"
+alias mysqlstart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server start"
+alias mysqlstop="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server stop"
+alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server restart"
 
 # redis alias quick command
 alias redisser="redis-server"
@@ -159,4 +159,20 @@ alias ctrl="ssh linode"
 
 
 
+
+
+# Added by termtile (https://github.com/apaszke/termtile)
+alias ul='osascript ~/.termtile/tile.scpt up left'
+alias ur='osascript ~/.termtile/tile.scpt up right'
+alias dl='osascript ~/.termtile/tile.scpt down left'
+alias dr='osascript ~/.termtile/tile.scpt down right'
+alias fl='osascript ~/.termtile/tile.scpt left'
+alias fr='osascript ~/.termtile/tile.scpt right'
+alias up='osascript ~/.termtile/tile.scpt up'
+alias down='osascript ~/.termtile/tile.scpt down'
+alias big='osascript ~/.termtile/resize.scpt '
+alias cen='osascript ~/.termtile/center.scpt '
+alias max='osascript ~/.termtile/maximize.scpt '
+alias sn='osascript ~/.termtile/changeScreen.scpt next'
+alias fs='osascript ~/.termtile/fullscreen.scpt '
 
