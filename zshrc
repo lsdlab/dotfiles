@@ -98,6 +98,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH setting
 export GOPATH=/Users/Chen/GO
@@ -175,4 +176,3 @@ alias cen='osascript ~/.termtile/center.scpt '
 alias max='osascript ~/.termtile/maximize.scpt '
 alias sn='osascript ~/.termtile/changeScreen.scpt next'
 alias fs='osascript ~/.termtile/fullscreen.scpt '
-
