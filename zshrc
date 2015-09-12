@@ -116,14 +116,17 @@ alias fuck='$(thefuck $(fc -ln -1))'
 alias FUCK='fuck'
 
 # mysql alias quick command
-alias mysqlstart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server start"
-alias mysqlstop="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server stop"
-alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server restart"
+alias mystart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server start"
+alias mystop="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server stop"
+alias myrestart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server restart"
+alias myreload="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server reload"
+alias myfreload="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server force-reload"
+alias mystatus="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server status"
 
 # redis alias quick command
-alias redisser="redis-server"
+alias redisstart="redis-server"
 alias rediscli="redis-cli"
-alias redisshut="redis-cli shutdown"
+alias redisshop="redis-cli shutdown"
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
