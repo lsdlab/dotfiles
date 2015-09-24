@@ -208,6 +208,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'hynek/vim-python-pep8-indent'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
