@@ -80,6 +80,9 @@ export LANG=en_US.UTF-8
 # zsh-completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Homebrew settings
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
@@ -100,20 +103,16 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# GOPATH setting
-export GOPATH=/Users/Chen/GO
-
-# mongodb settings
-export MONGO_PATH=/usr/local/mongodb
-export PATH=$PATH:$MONGO_PATH/bin
+# GOPATH settings
+export PATH=$PATH:$GOPATH/bin
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH
 
 # fuck settings 
-alias fuck='$(thefuck $(fc -ln -1))'
-# You can use whatever you want as an alias, like for mondays:
-alias FUCK='fuck'
+eval "$(thefuck --alias)"
+# You can use whatever you want as an alias, like for Mondays:
+eval "$(thefuck --alias FUCK)"
 
 # mysql alias quick command
 alias mystart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server start"
@@ -127,6 +126,10 @@ alias mystatus="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server status"
 alias redisstart="redis-server"
 alias rediscli="redis-cli"
 alias redisshop="redis-cli shutdown"
+
+# mongodb settings
+export MONGO_PATH=/usr/local/mongodb
+export PATH=$PATH:$MONGO_PATH/bin
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"

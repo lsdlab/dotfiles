@@ -20,19 +20,14 @@ eval "$(pyenv init -)"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH setting
-export GOPATH=/Users/Chen/GO
-
-# mongodb settings
-export MONGO_PATH=/usr/local/mongodb
-export PATH=$PATH:$MONGO_PATH/bin
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH
 
 # fuck settings 
-alias fuck='$(thefuck $(fc -ln -1))'
-# You can use whatever you want as an alias, like for mondays:
-alias FUCK='fuck'
+eval "$(thefuck --alias)"
+# You can use whatever you want as an alias, like for Mondays:
+eval "$(thefuck --alias FUCK)"
 
 # mysql alias quick command
 alias mysqlstart="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server start"
@@ -47,6 +42,10 @@ alias mystatus="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server status"
 alias redisstart="redis-server"
 alias rediscli="redis-cli"
 alias redisstop="redis-cli shutdown"
+
+# mongodb settings
+export MONGO_PATH=/usr/local/mongodb
+export PATH=$PATH:$MONGO_PATH/bin
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
@@ -75,9 +74,6 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
-
-# alias Linode Tokyo VPS quick connect
-alias ctrl="ssh linode"
 
 
 
