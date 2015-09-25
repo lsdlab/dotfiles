@@ -20,6 +20,7 @@ eval "$(pyenv init -)"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH setting
+export PATH=$PATH:$GOPATH/bin
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH
