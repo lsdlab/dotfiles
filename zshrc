@@ -127,8 +127,8 @@ alias myfreload="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server force-relo
 alias mystatus="sudo /usr/local/Cellar/mysql/5.6.26/bin/mysql.server status"
 
 # postgresql alias quick command
-alias pgstart = "pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop = "pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # redis alias quick command
 alias redisstart="redis-server"
