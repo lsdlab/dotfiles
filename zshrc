@@ -104,7 +104,11 @@ eval "$(pyenv init -)"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH settings
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# nvm settings
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH

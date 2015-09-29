@@ -12,7 +12,6 @@ alias p="python"
 export WORKON_HOME=/Users/Chen/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-
 # pyenv settings
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -21,6 +20,10 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH setting
 export PATH=$PATH:$GOPATH/bin
+
+# nvm settings
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH
