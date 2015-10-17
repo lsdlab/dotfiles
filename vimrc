@@ -209,6 +209,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'elzr/vim-json'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
@@ -242,3 +245,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+
+
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
