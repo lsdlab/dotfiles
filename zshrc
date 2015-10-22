@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew brew-cask bundler cabal celery cloudapp cp django encode64 forklift gem git git-extras git-flow github gitignore go golang grunt glup heroku history httpie iwhois marked2 mosh npm nvm node osx pep8 pip postgres pow pyenv python rails rake rbenv redis-cli rsync ruby rvm scala sublime sudo supervisor thefuck tmux virtualenv virtualenvwrapper vundle xcode zsh_reload)
+plugins=(autojump autopep8 brew brew-cask bundler cabal cloudapp cp django encode64 gem git git-extras git-flow github gitignore go golang grunt glup heroku history httpie iwhois marked2 npm nvm node osx pep8 pip postgres pow pyenv python rails rake rbenv redis-cli rsync ruby rvm sublime sudo supervisor thefuck tmux virtualenv virtualenvwrapper vundle xcode zsh_reload)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -170,38 +170,6 @@ alias vim="mvim"
 alias rake="noglob rake"
 
 
-
-
-
-# Added by termtile (https://github.com/apaszke/termtile)
-alias ur='osascript ~/.termtile/tile.scpt up right'
-alias dl='osascript ~/.termtile/tile.scpt down left'
-alias dr='osascript ~/.termtile/tile.scpt down right'
-alias fl='osascript ~/.termtile/tile.scpt left'
-alias fr='osascript ~/.termtile/tile.scpt right'
-alias up='osascript ~/.termtile/tile.scpt up'
-alias down='osascript ~/.termtile/tile.scpt down'
-alias big='osascript ~/.termtile/resize.scpt '
-alias cen='osascript ~/.termtile/center.scpt '
-alias max='osascript ~/.termtile/maximize.scpt '
-alias sn='osascript ~/.termtile/changeScreen.scpt next'
-alias fs='osascript ~/.termtile/fullscreen.scpt '
-
-
-# Added by termtile (https://github.com/apaszke/termtile)
-alias ul='osascript ~/.termtile/tile.scpt up left'
-alias ur='osascript ~/.termtile/tile.scpt up right'
-alias dl='osascript ~/.termtile/tile.scpt down left'
-alias dr='osascript ~/.termtile/tile.scpt down right'
-alias fl='osascript ~/.termtile/tile.scpt left'
-alias fr='osascript ~/.termtile/tile.scpt right'
-alias up='osascript ~/.termtile/tile.scpt up'
-alias down='osascript ~/.termtile/tile.scpt down'
-alias big='osascript ~/.termtile/resize.scpt '
-alias cen='osascript ~/.termtile/center.scpt '
-alias max='osascript ~/.termtile/maximize.scpt '
-alias sn='osascript ~/.termtile/changeScreen.scpt next'
-alias fs='osascript ~/.termtile/fullscreen.scpt '
 
 
 # Added by termtile (https://github.com/apaszke/termtile)
