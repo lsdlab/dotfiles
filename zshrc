@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew brew-cask bundler cabal cloudapp cp django encode64 gem git git-extras git-flow github gitignore go golang grunt glup heroku history httpie iwhois marked2 npm nvm node osx pep8 pip postgres pow pyenv python rails rake rbenv redis-cli rsync ruby rvm sublime sudo supervisor thefuck tmux virtualenv virtualenvwrapper vundle xcode zsh_reload)
+plugins=(autojump autopep8 brew brew-cask bundler cp django encode64 gem git git-extras git-flow github gitignore go golang grunt gulp heroku history httpie iwhois marked2 npm nvm node osx pep8 pip postgres pow pyenv python rails rake rbenv redis-cli rsync ruby rvm sublime sudo supervisor thefuck tmux virtualenv virtualenvwrapper vundle xcode zsh_reload)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
