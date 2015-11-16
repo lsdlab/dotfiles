@@ -6,7 +6,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # python
-alias p="python"
+alias py="python"
 
 # virtualenvwrapper settings
 export WORKON_HOME=/Users/Chen/.virtualenvs
@@ -77,12 +77,8 @@ alias cd4="cd ../../../.."
 alias cd5="cd ../../../../.."
 
 # alias mkdircd
-function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
-
-
-
-
