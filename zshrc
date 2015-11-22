@@ -122,12 +122,12 @@ eval "$(thefuck --alias)"
 eval "$(thefuck --alias FUCK)"
 
 # mysql alias quick command
-alias mystart="sudo /usr/local/Cellar/mysql/5.6.27/bin/mysql.server start"
-alias mystop="sudo /usr/local/Cellar/mysql/5.6.27/bin/mysql.server stop"
-alias myrestart="sudo /usr/local/Cellar/mysql/5.6.27/bin/mysql.server restart"
-alias myreload="sudo /usr/local/Cellar/mysql/5.6.27/bin/mysql.server reload"
-alias myfreload="sudo /usr/local/Cellar/mysql/5.6.27/bin/mysql.server force-reload"
-alias mystatus="sudo /usr/local/Cellar/mysql/5.6.27/bin/mysql.server status"
+alias mystart="sudo /usr/local/Cellar/mysql/5.7.9/bin/mysql.server start"
+alias mystop="sudo /usr/local/Cellar/mysql/5.7.9/bin/mysql.server stop"
+alias myrestart="sudo /usr/local/Cellar/mysql/5.7.9/bin/mysql.server restart"
+alias myreload="sudo /usr/local/Cellar/mysql/5.7.9/bin/mysql.server reload"
+alias myfreload="sudo /usr/local/Cellar/mysql/5.7.9/bin/mysql.server force-reload"
+alias mystatus="sudo /usr/local/Cellar/mysql/5.7.9/bin/mysql.server status"
 
 # postgresql alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
