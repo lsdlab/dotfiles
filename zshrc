@@ -83,12 +83,15 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Homebrew settings
-export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
+# autojump settings
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # coreutils settings
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# Homebrew settings
+export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
 alias py="python"
