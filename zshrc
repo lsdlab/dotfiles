@@ -165,7 +165,7 @@ alias cd5="cd ../../../../.."
 # alias mkdircd
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-# alias macvim replace vim
+alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
 
