@@ -189,3 +189,5 @@ alias cen='osascript ~/.termtile/center.scpt '
 alias max='osascript ~/.termtile/maximize.scpt '
 alias sn='osascript ~/.termtile/changeScreen.scpt next'
 alias fs='osascript ~/.termtile/fullscreen.scpt '
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
