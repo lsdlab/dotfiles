@@ -85,3 +85,6 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

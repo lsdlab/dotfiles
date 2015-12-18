@@ -25,8 +25,3 @@
 * gitconfig    // git 配置
 * gitingore_global    //gitignore 全局配置 C, Python, virtualenv, Swift, Objective-C, OS X, Xcode, Node.JS，用的 [karan/joe](https://github.com/karan/joe) 生成
 
-## Markdown 预览 CSS
-* ReadMe_PDF.css
-* ReadMe_Preview.css    // Markdown 打印和预览的主题 CSS    # 参照 [hzlzh/Mou-Theme](https://github.com/hzlzh/Mou-Theme)，我自己改了一个字体大小差不多能打印成 PDF 的版本
-
-

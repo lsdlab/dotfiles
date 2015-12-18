@@ -172,7 +172,8 @@ alias vim="mvim"
 # temp rake alias for octopress
 alias rake="noglob rake"
 
-
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 
 # Added by termtile (https://github.com/apaszke/termtile)
