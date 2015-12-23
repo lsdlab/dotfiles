@@ -101,9 +101,7 @@ export WORKON_HOME=/Users/Chen/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # pyenv settings
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH settings
