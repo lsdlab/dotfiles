@@ -19,12 +19,16 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# GOPATH setting
-export PATH=$PATH:$GOPATH/bin
+# rbenv settings
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 
 # nvm settings
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# GOPATH setting
+export PATH=$PATH:$GOPATH/bin
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH
@@ -60,7 +64,6 @@ export PATH=$PATH:$MONGO_PATH/bin
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false"
 
-
 # alias colorful
 alias ls="ls -G"
 alias ll="ls -lG" 
@@ -84,5 +87,23 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 alias vi="mvim"
 alias vim="mvim"
 
+# Language settings
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# Added by termtile (https://github.com/apaszke/termtile)
+alias ul='osascript ~/.termtile/tile.scpt up left'
+alias ur='osascript ~/.termtile/tile.scpt up right'
+alias dl='osascript ~/.termtile/tile.scpt down left'
+alias dr='osascript ~/.termtile/tile.scpt down right'
+alias fl='osascript ~/.termtile/tile.scpt left'
+alias fr='osascript ~/.termtile/tile.scpt right'
+alias up='osascript ~/.termtile/tile.scpt up'
+alias down='osascript ~/.termtile/tile.scpt down'
+alias big='osascript ~/.termtile/resize.scpt '
+alias cen='osascript ~/.termtile/center.scpt '
+alias max='osascript ~/.termtile/maximize.scpt '
+alias sn='osascript ~/.termtile/changeScreen.scpt next'
+alias fs='osascript ~/.termtile/fullscreen.scpt '
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

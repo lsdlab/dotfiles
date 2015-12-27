@@ -104,12 +104,16 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# GOPATH settings
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# rbenv settings
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 
 # nvm settings
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# GOPATH settings
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # cabal settings
 export PATH=$HOME/.cabal/bin:$PATH
@@ -163,16 +167,16 @@ alias cd5="cd ../../../../.."
 # alias mkdircd
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-alias macvim replace vim
+# alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
 
 # temp rake alias for octopress
 alias rake="noglob rake"
 
+# Language settings
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
 
 # Added by termtile (https://github.com/apaszke/termtile)
 alias ul='osascript ~/.termtile/tile.scpt up left'
