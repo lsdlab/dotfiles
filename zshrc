@@ -110,7 +110,7 @@ eval "$(rbenv init -)"
 
 # nvm settings
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+. $(brew --prefix nvm)/nvm.sh
 
 # GOPATH settings
 export PATH=$PATH:/usr/local/opt/go/libexec/bin

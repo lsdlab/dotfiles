@@ -25,7 +25,7 @@ eval "$(rbenv init -)"
 
 # nvm settings
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+. $(brew --prefix nvm)/nvm.sh
 
 # GOPATH setting
 export PATH=$PATH:$GOPATH/bin
