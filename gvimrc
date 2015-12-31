@@ -251,3 +251,4 @@ filetype plugin indent on    " required
 
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set rtp+=/usr/local/opt/fzf
