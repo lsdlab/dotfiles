@@ -9,7 +9,10 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
-alias py="python"
+alias p="python"
+
+# node
+alias n="node"
 
 # virtualenvwrapper settings
 export WORKON_HOME=/Users/Chen/.virtualenvs
@@ -19,13 +22,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# rbenv settings
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
-
 # nvm settings
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
+
+# rbenv settings
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 
 # GOPATH setting
 export PATH=$PATH:$GOPATH/bin
@@ -71,7 +74,10 @@ alias lal="ls -alG"
 alias grep="grep --color=auto"
 
 # alias clear cls
-alias cls="clear"
+alias cs="clear"
+
+# alias gst gs
+alias gs="git status"
 
 # alias cd1 cd2...
 alias cd1="cd .."
