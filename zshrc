@@ -158,10 +158,7 @@ alias lal="ls -alG"
 alias grep="grep --color=auto"
 
 # alias clear cls
-alias cs="clear"
-
-# alias gst gs
-alias gs="git status"
+alias cls="clear"
 
 # alias cd1 cd2...
 alias cd1="cd .."
