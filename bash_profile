@@ -5,6 +5,9 @@
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# fzf settings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Homebrew settings
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
@@ -109,4 +112,5 @@ alias max='osascript ~/.termtile/maximize.scpt '
 alias sn='osascript ~/.termtile/changeScreen.scpt next'
 alias fs='osascript ~/.termtile/fullscreen.scpt '
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# docbook settings
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
