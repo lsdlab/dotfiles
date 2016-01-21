@@ -15,7 +15,6 @@
 * cobalt2.zsh-theme    // colbalt2 配色的 iTerm 配置，没有 Terminal 的；和 zsh 的主题，参照 [wesbos/Cobalt2-iterm](https://github.com/wesbos/Cobalt2-iterm)
     
 ## vim 和 macvim
-* vimrc    // vim 的配置
 * gvimrc    // MacVim 的配置
 
 ## tmux
