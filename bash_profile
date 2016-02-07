@@ -1,10 +1,6 @@
 # autojump settings
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# coreutils settings
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -20,7 +20,7 @@ CASE_SENSITIVE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -48,33 +48,31 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(autojump autopep8 bower brew brew-cask bundler django encode64 fabric forklift gem git git-extras git-flow git-prompt github gitignore gnu-utils go golang history heroku httpie iwhois marked2 mosh jump nmap npm node nvm osx pep8 pip pod postgres pyenv python pylint rake rbenv redis-cli rsync ruby rvm sublime sudo supervisor thefuck tmux terminalapp virtualenv virtualenvwrapper vundle vi-mode xcode zsh_reload)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='mvim'
+fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-
-
 
 
 # zsh-completion
@@ -85,10 +83,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # autojump settings
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
-# coreutils settings
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -179,10 +173,6 @@ alias vim="mvim"
 
 # temp rake alias for octopress
 alias rake="noglob rake"
-
-# Language settings
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 
 # Added by termtile (https://github.com/apaszke/termtile)
 alias ul='osascript ~/.termtile/tile.scpt up left'
