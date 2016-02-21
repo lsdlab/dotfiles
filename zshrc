@@ -64,10 +64,10 @@ else
 fi
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -92,6 +92,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
 alias p="python"
+# no pyc
+export PYTHONDONTWRITEBYTECODE=x
 
 # node
 alias n="node"
@@ -153,9 +155,8 @@ alias ls="ls -G"
 alias ll="ls -lG"
 alias lal="ls -alG"
 alias grep="grep --color=auto"
-
-# alias clear cls
 alias cls="clear"
+alias cat='lolcat'
 
 # alias cd1 cd2...
 alias cd1="cd .."

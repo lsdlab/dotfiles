@@ -9,6 +9,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
 alias p="python"
+# no pyc
+export PYTHONDONTWRITEBYTECODE=x
 
 # node
 alias n="node"
@@ -66,14 +68,13 @@ export PATH=$PATH:$MONGO_PATH/bin
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false"
 
-# alias colorful
+# alias
 alias ls="ls -G"
 alias ll="ls -lG" 
 alias lal="ls -alG"
 alias grep="grep --color=auto"
-
-# alias clear cls
 alias cls="clear"
+alias cat='lolcat'
 
 # alias cd1 cd2...
 alias cd1="cd .."
@@ -88,10 +89,6 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
-
-# Language settings
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 
 # Added by termtile (https://github.com/apaszke/termtile)
 alias ul='osascript ~/.termtile/tile.scpt up left'
@@ -110,3 +107,8 @@ alias fs='osascript ~/.termtile/fullscreen.scpt '
 
 # docbook settings
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
+
+# Language settings
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
