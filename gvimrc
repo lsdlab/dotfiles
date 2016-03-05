@@ -17,7 +17,6 @@ set foldmethod=syntax    " 基于语法代码折叠
 syntax enable    "语法高亮
 syntax on
 
-
 " =========
 " 环境配置
 " =========
@@ -213,12 +212,14 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'mattn/emmet-vim'
+Plugin 'maksimr/vim-jsbeautify'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'wincent/command-t'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -242,3 +243,8 @@ filetype plugin indent on    " required
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=/usr/local/opt/fzf
+
+
+
+
+let g:ackprg = 'ag --nogroup --nocolor --column'

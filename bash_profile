@@ -1,3 +1,7 @@
+# Language settings
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # autojump settings
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -9,7 +13,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
 alias p="python"
-# no pyc
+# no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 
 # node
@@ -68,13 +72,30 @@ export PATH=$PATH:$MONGO_PATH/bin
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false"
 
-# alias
+# alias 
 alias ls="ls -G"
-alias ll="ls -lG" 
+alias ll="ls -lG"
+alias la="ls -aG"
 alias lal="ls -alG"
 alias grep="grep --color=auto"
 alias cls="clear"
-alias cat='lolcat'
+
+# alias lolcat(a Ruby tool) to default cat
+alias cat="lolcat"
+
+# alias auto open file in subl or vim
+alias -s html=subl
+alias -s js=subl
+alias -s py=vi
+alias -s c=vi
+alias -s txt=vi
+alias -s json=vi
+
+# alias auto archive .gz etc.
+alias -s gz="tar -xzvf"
+alias -s tgz="tar -xzvf"
+alias -s bz2="tar -xjvf"
+alias -s zip="unzip"
 
 # alias cd1 cd2...
 alias cd1="cd .."
@@ -83,12 +104,15 @@ alias cd3="cd ../../.."
 alias cd4="cd ../../../.."
 alias cd5="cd ../../../../.."
 
-# alias mkdircd
+# alias mkdir and cd in it
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
+
+# temp rake alias for octopress
+alias rake="noglob rake"
 
 # Added by termtile (https://github.com/apaszke/termtile)
 alias ul='osascript ~/.termtile/tile.scpt up left'
@@ -107,8 +131,3 @@ alias fs='osascript ~/.termtile/fullscreen.scpt '
 
 # docbook settings
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
-
-
-# Language settings
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
