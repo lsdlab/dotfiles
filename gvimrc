@@ -178,8 +178,6 @@ endfunction
 imap <C-d> <C-r>=GetTimeInfo()<cr>
 
 
-
-
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
@@ -201,22 +199,8 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 " plugin on GitHub repo (my custom)
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'wakatime/vim-wakatime'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'wincent/command-t'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -238,10 +222,6 @@ filetype plugin indent on    " required
 
 
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=/usr/local/opt/fzf
 
 
-
-
-let g:ackprg = 'ag --nogroup --nocolor --column'
