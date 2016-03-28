@@ -22,5 +22,4 @@
 
 ## git
 * gitconfig    // git 配置
-* gitingore_global    //gitignore 全局配置 C, Python, virtualenv, Swift, Objective-C, OS X, Xcode, Node.JS，用的 [karan/joe](https://github.com/karan/joe) 生成
-
+* gitingore_global    // gitignore 用的 [karan/joe](https://github.com/karan/joe) 生成
