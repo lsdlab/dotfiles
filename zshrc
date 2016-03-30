@@ -84,9 +84,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # autojump settings
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# fzf settings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Homebrew settings
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
@@ -98,27 +95,20 @@ export PYTHONDONTWRITEBYTECODE=x
 # node
 alias n="node"
 
-# virtualenvwrapper settings
-export WORKON_HOME=/Users/Chen/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
 # pyenv settings
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# virtualenvwrapper settings
+export WORKON_HOME=/Users/Chen/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
 # nvm settings
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
 
-# rbenv settings
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
-
 # GOPATH settings
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# cabal settings
-export PATH=$HOME/.cabal/bin:$PATH
 
 # fuck settings 
 eval "$(thefuck --alias)"
