@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew brew-cask django git git-extras git-flow git-prompt github gitignore history heroku httpie iwhois marked2 nmap npm node nvm osx pep8 pip pod postgres pyenv python pylint redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp virtualenv virtualenvwrapper vundle vi-mode xcode zsh_reload)
+plugins=(autojump autopep8 brew brew-cask django git git-extras git-flow git-prompt github gitignore history heroku httpie iwhois marked2 nmap npm node osx pep8 pip pod postgres pyenv python pylint redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp virtualenv virtualenvwrapper vundle vi-mode xcode zsh_reload)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
@@ -196,6 +196,3 @@ alias cen='osascript ~/.termtile/center.scpt '
 alias max='osascript ~/.termtile/maximize.scpt '
 alias sn='osascript ~/.termtile/changeScreen.scpt next'
 alias fs='osascript ~/.termtile/fullscreen.scpt '
-
-# docbook settings
-export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
