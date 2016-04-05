@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerline"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -88,16 +88,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
-alias p="python"
+alias p2="python"
+alias p3="python3"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 
 # node
 alias n="node"
-
-# pyenv settings
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # virtualenvwrapper settings
 export WORKON_HOME=/Users/Chen/.virtualenvs
@@ -106,6 +103,12 @@ source /usr/local/bin/virtualenvwrapper.sh
 # nvm settings
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
+
+#alias for cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
 
 # GOPATH settings
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
@@ -181,24 +184,3 @@ alias vim="mvim"
 
 # temp rake alias for octopress
 alias rake="noglob rake"
-
-# Added by termtile (https://github.com/apaszke/termtile)
-alias ul='osascript ~/.termtile/tile.scpt up left'
-alias ur='osascript ~/.termtile/tile.scpt up right'
-alias dl='osascript ~/.termtile/tile.scpt down left'
-alias dr='osascript ~/.termtile/tile.scpt down right'
-alias fl='osascript ~/.termtile/tile.scpt left'
-alias fr='osascript ~/.termtile/tile.scpt right'
-alias up='osascript ~/.termtile/tile.scpt up'
-alias down='osascript ~/.termtile/tile.scpt down'
-alias big='osascript ~/.termtile/resize.scpt '
-alias cen='osascript ~/.termtile/center.scpt '
-alias max='osascript ~/.termtile/maximize.scpt '
-alias sn='osascript ~/.termtile/changeScreen.scpt next'
-alias fs='osascript ~/.termtile/fullscreen.scpt '
-
-#alias for cnpm
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.cnpmrc"
