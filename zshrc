@@ -179,5 +179,6 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 alias vi="mvim"
 alias vim="mvim"
 
-# temp rake alias for octopress
-alias rake="noglob rake"
+# alias for quick blog
+alias newblog="sh ~/Documents/BreakWire/newblog.sh"
+alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
