@@ -182,8 +182,8 @@ alias vim="mvim"
 # alias for quick blog
 alias newblog="sh ~/Documents/BreakWire/newblog.sh"
 alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
+alias startpelican="make devserver"
 alias stoppelican="sh ~/Documents/BreakWire/develop_server.sh stop"
-
 
 # pip save settings
 export WORKON_HOME=~/.virtualenvs
