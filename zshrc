@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew brew-cask django git git-extras git-flow git-prompt github gitignore history heroku httpie iwhois marked2 nmap npm node osx pep8 pip pod postgres python pylint redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp virtualenv virtualenvwrapper vundle vi-mode xcode zsh_reload)
+plugins=(autojump autopep8 brew brew-cask django git git-extras git-flow git-prompt github gitignore history heroku httpie iwhois marked2 nmap npm node osx pep8 pip pod postgres python pylint redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp vundle vi-mode xcode zsh_reload)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
@@ -92,9 +92,10 @@ alias p2="python"
 alias p3="python3"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
-# virtualenvwrapper settings
-export WORKON_HOME=/Users/Chen/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+# pyenv settings
+eval "$(pyenv init -)"
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # node
 alias n="node"
@@ -179,14 +180,16 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 alias vi="mvim"
 alias vim="mvim"
 
+# pip save settings
+export WORKON_HOME=~/.virtualenvs
+[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
+[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
+[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
+source /usr/local/bin/virtualenvwrapper.sh
+
 # alias for quick blog
 alias newblog="sh ~/Documents/BreakWire/newblog.sh"
 alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
 alias startpelican="make devserver"
 alias stoppelican="sh ~/Documents/BreakWire/develop_server.sh stop"
 
-# pip save settings
-export WORKON_HOME=~/.virtualenvs
-[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
-[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
-[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
