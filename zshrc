@@ -100,8 +100,8 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # node
 alias n="node"
 # nvm settings
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+# . $(brew --prefix nvm)/nvm.sh
 #alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \

@@ -199,6 +199,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'leshill/vim-json'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
