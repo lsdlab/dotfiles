@@ -89,24 +89,26 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
 # python
 alias p2="python"
-alias p3="python3"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 # pyenv settings
-eval "$(pyenv init -)"
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # node
 alias n="node"
 # nvm settings
-# export NVM_DIR=~/.nvm
-# . $(brew --prefix nvm)/nvm.sh
+#export NVM_DIR=~/.nvm
+#. $(brew --prefix nvm)/nvm.sh
 #alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
+
+# rbenv settings
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 
 # GOPATH settings
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
@@ -117,12 +119,12 @@ eval "$(thefuck --alias)"
 eval "$(thefuck --alias FUCK)"
 
 # mysql alias quick command
-alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.12/bin/mysql.server start"
-alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.12/bin/mysql.server stop"
-alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.12/bin/mysql.server restart"
-alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.12/bin/mysql.server reload"
-alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.12/bin/mysql.server force-reload"
-alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.12/bin/mysql.server status"
+alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server start"
+alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server stop"
+alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server restart"
+alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server reload"
+alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server force-reload"
+alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server status"
 
 # postgresql alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -181,11 +183,11 @@ alias vi="mvim"
 alias vim="mvim"
 
 # pip save settings
-export WORKON_HOME=~/.virtualenvs
-[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
-[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
-[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=~/.virtualenvs
+#[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
+#[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
+#[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
+#source /usr/local/bin/virtualenvwrapper.sh
 
 # alias for quick blog
 alias newblog="sh ~/Documents/BreakWire/newblog.sh"

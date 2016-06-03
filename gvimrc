@@ -201,8 +201,13 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'leshill/vim-json'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'mileszs/ack.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 
+" the sliver searcher settings
+let g:ackprg = 'ag --vimgrep'
+
+" fzf settings
 set rtp+=/usr/local/opt/fzf
