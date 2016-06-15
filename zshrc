@@ -11,7 +11,7 @@ ZSH_THEME="powerline"
 CASE_SENSITIVE="true"
 
 #  Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 #  Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -98,9 +98,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # node
 alias n="node"
 # nvm settings
-#export NVM_DIR=~/.nvm
-#. $(brew --prefix nvm)/nvm.sh
-#alias for cnpm
+# export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+# alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
@@ -111,7 +111,7 @@ export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
 
 # GOPATH settings
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=/Users/Chen/GoProjects
 
 # fuck settings 
 eval "$(thefuck --alias)"
@@ -158,15 +158,10 @@ alias cat="lolcat"
 alias -s html=subl
 alias -s js=subl
 alias -s py=vi
+alias -s rb=vi
 alias -s c=vi
 alias -s txt=vi
 alias -s json=vi
-
-# alias auto archive .gz etc.
-alias -s gz="tar -xzvf"
-alias -s tgz="tar -xzvf"
-alias -s bz2="tar -xjvf"
-alias -s zip="unzip"
 
 # alias cd1 cd2...
 alias cd1="cd .."
@@ -195,3 +190,5 @@ alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
 alias startpelican="make devserver"
 alias stoppelican="sh ~/Documents/BreakWire/develop_server.sh stop"
 
+# item2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
