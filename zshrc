@@ -119,21 +119,21 @@ eval "$(thefuck --alias)"
 eval "$(thefuck --alias FUCK)"
 
 # mysql alias quick command
-alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server start"
-alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server stop"
-alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server restart"
-alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server reload"
-alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server force-reload"
-alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server status"
+alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server start && echo 'start MySQL success'"
+alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server stop  && echo 'stop MySQL success'"
+alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server restart && echo 'restart MySQL success'"
+alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server reload && echo 'reload MySQL success'"
+alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server force-reload  && echo 'force reload MySQL success'"
+alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server status && echo 'list MySQL status'"
 
 # postgresql alias quick command
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start && echo 'start PostgreSQL success'"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast && echo 'stop PostgreSQL success'"
 
 # redis alias quick command
-alias redisstart="redis-server"
+alias redisstart="redis-server && echo 'start Redis success'"
+alias redisshop="redis-cli shutdown && echo 'stop Redis success'"
 alias rediscli="redis-cli"
-alias redisshop="redis-cli shutdown"
 
 # mongodb settings
 export MONGO_PATH=/usr/local/mongodb
@@ -177,7 +177,7 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 alias vi="mvim"
 alias vim="mvim"
 
-# pip save settings
+#  pip save settings
 #export WORKON_HOME=~/.virtualenvs
 #[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
 #[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line

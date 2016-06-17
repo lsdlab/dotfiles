@@ -2,16 +2,18 @@
 
 cd content/
 
-filename_now=`date "+%Y-%m-%d"`
-now=`date "+%Y-%m-%d %H:%M:%S"`
+fileName=`date "+%Y-%m-%d"`
+currentTime=`date "+%Y-%m-%d %H:%M:%S"`
 
-cat>${filename_now}.md<<EOF
+cat>${fileName}.md<<EOF
 Title:
-Date: ${now}
-Modified: ${now}
+Date: ${currentTime}
+Modified: ${currentTime}
 Category:
 Tags:
 Slug:
 Authors: Chen Jian
 Summary:
 EOF
+
+echo "Create ~/Document/BreakWire/content/${fileName}.md"
