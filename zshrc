@@ -74,21 +74,29 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-
 # zsh-completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# autojump settings
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# Language settings
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Homebrew settings
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
+# autojump settings
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# fuck settings 
+eval "$(thefuck --alias)"
+# You can use whatever you want as an alias, like for Mondays:
+eval "$(thefuck --alias FUCK)"
+
 # python
-alias p2="python"
+alias p="python"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 # pyenv settings
@@ -106,17 +114,14 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
+# ruby
+alias r="ruby"
 # rbenv settings
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
 
 # GOPATH settings
 export GOPATH=/Users/Chen/GoProjects
-
-# fuck settings 
-eval "$(thefuck --alias)"
-# You can use whatever you want as an alias, like for Mondays:
-eval "$(thefuck --alias FUCK)"
 
 # mysql alias quick command
 alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server start && echo 'start MySQL success'"
@@ -126,22 +131,29 @@ alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server reload &
 alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server force-reload  && echo 'force reload MySQL success'"
 alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server status && echo 'list MySQL status'"
 
-# postgresql alias quick command
+# PostgreSQL alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start && echo 'start PostgreSQL success'"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast && echo 'stop PostgreSQL success'"
 
-# redis alias quick command
+# Redis alias quick command
 alias redisstart="redis-server && echo 'start Redis success'"
-alias redisshop="redis-cli shutdown && echo 'stop Redis success'"
 alias rediscli="redis-cli"
 
-# mongodb settings
+# mongoDB settings
 export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin
+alias mongodbstart="mongod"
+alias mongodbcli="mongo"
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false"
+
+# alias for quick blog
+alias newblog="sh ~/Documents/BreakWire/newblog.sh"
+alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
+alias startpelican="make devserver"
+alias stoppelican="sh ~/Documents/BreakWire/develop_server.sh stop"
 
 # alias 
 alias ls="ls -G"
@@ -150,18 +162,6 @@ alias la="ls -aG"
 alias lal="ls -alG"
 alias grep="grep --color=auto"
 alias cls="clear"
-
-# alias lolcat(a Ruby tool) to default cat
-alias cat="lolcat"
-
-# alias auto open file in subl or vim
-alias -s html=subl
-alias -s js=subl
-alias -s py=vi
-alias -s rb=vi
-alias -s c=vi
-alias -s txt=vi
-alias -s json=vi
 
 # alias cd1 cd2...
 alias cd1="cd .."
@@ -173,22 +173,28 @@ alias cd5="cd ../../../../.."
 # alias mkdir and cd in it
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
+# alias lolcat(a Ruby tool) to default cat
+alias cat="lolcat"
+
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
 
-#  pip save settings
+# item2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# alias auto open file in subl or vim
+alias -s html=subl
+alias -s js=subl
+alias -s py=vi
+alias -s rb=vi
+alias -s c=vi
+alias -s txt=vi
+alias -s json=vi
+
+# pip save settings
 #export WORKON_HOME=~/.virtualenvs
 #[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
 #[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
 #[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
 #source /usr/local/bin/virtualenvwrapper.sh
-
-# alias for quick blog
-alias newblog="sh ~/Documents/BreakWire/newblog.sh"
-alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
-alias startpelican="make devserver"
-alias stoppelican="sh ~/Documents/BreakWire/develop_server.sh stop"
-
-# item2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
