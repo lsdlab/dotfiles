@@ -9,13 +9,16 @@
 set laststatus=2    " 显示状态栏
 :set showcmd    " 状态栏显示目前所执行的指令
 set cmdheight=2
+set showmatch     "显示匹配的括号"
+set scrolloff=5        " 距离顶部和底部5行
 :set showmode    " 显示模式
+set fenc=utf-8      " 文件编码
+set fileformat=unix    " 设置以unix的格式保存文件
 :set previewwindow    " 标识预览窗口
 set history=1000    " 历史记录1000条
 set foldmethod=syntax    " 基于语法代码折叠
 :set go=    " 去掉边框
-syntax enable    "语法高亮
-syntax on
+syntax on    " 语法高亮
 
 " =========
 " 环境配置
@@ -34,6 +37,7 @@ syntax on
 " 缩进
 set autoindent      " 设置自动缩进
 set smartindent     " 设置智能缩进
+set cindent        " 设置C样式的缩进格式"
 
 " 行号和标尺
 :set number     "行号
@@ -85,8 +89,12 @@ if has('gui_running')
     set guioptions=mcr
 
     " 高亮光标所在的行
-    set cursorline
+    set cursorline        "突出显示当前行"
+    set cursorcolumn        "突出显示当前列 
     
+    " 设置背景色
+    set background=dark        "设置背景色
+
     " 编辑器配色
     colorscheme desert
 
@@ -100,7 +108,7 @@ if has('gui_running')
         set guifontwide=Monaco:h12
 
         " 半透明和窗口大小
-        set transparency=4
+        set transparency=10
         set lines=30 columns=80
 
         " 使用 MacVim 原生的全屏幕功能
@@ -183,7 +191,6 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 let g:vim_markdown_frontmatter=1
 
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -202,6 +209,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'leshill/vim-json'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tell-k/vim-autopep8'
 call vundle#end()            " required
 filetype plugin indent on    " required
 

@@ -80,10 +80,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Language settings
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 # Homebrew settings
 export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 
@@ -97,6 +93,8 @@ eval "$(thefuck --alias FUCK)"
 
 # python
 alias p="python"
+alias p2="python2"
+alias p3="python3"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 # pyenv settings
