@@ -121,27 +121,30 @@ eval "$(rbenv init -)"
 # GOPATH settings
 export GOPATH=/Users/Chen/GoProjects
 
-# mysql alias quick command
-alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server start && echo 'start MySQL success'"
-alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server stop  && echo 'stop MySQL success'"
-alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server restart && echo 'restart MySQL success'"
-alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server reload && echo 'reload MySQL success'"
-alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server force-reload  && echo 'force reload MySQL success'"
-alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.13/bin/mysql.server status && echo 'list MySQL status'"
-
 # PostgreSQL alias quick command
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start && echo 'start PostgreSQL success'"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast && echo 'stop PostgreSQL success'"
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias pcli="pgcli"
+
+# mysql alias quick command
+alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server start"
+alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server stop"
+alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server restart"
+alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server reload"
+alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server force-reload"
+alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server status"
+alias mcli="mycli"
 
 # Redis alias quick command
-alias redisstart="redis-server && echo 'start Redis success'"
+alias redisstart="redis-server"
 alias rediscli="redis-cli"
 
-# mongoDB settings
+# MongoDB settings
 export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin
 alias mongodbstart="mongod"
 alias mongodbcli="mongo"
+alias adminmongo="cd ~/tools/adminMongo && npm start"
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
@@ -177,18 +180,6 @@ alias cat="lolcat"
 # alias macvim replace vim
 alias vi="mvim"
 alias vim="mvim"
-
-# item2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# alias auto open file in subl or vim
-alias -s html=subl
-alias -s js=subl
-alias -s py=vi
-alias -s rb=vi
-alias -s c=vi
-alias -s txt=vi
-alias -s json=vi
 
 # pip save settings
 #export WORKON_HOME=~/.virtualenvs
