@@ -2,8 +2,9 @@
 	name = Chen Jian
 	email = lsdlab@icloud.com
 [core]
-	editor = vim
+	editor = subl
 	excludesfile = /Users/Chen/.gitignore_global
+	quotepath = false
 [merge]
 	tool = vimdiff
 [color]
