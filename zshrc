@@ -104,20 +104,11 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # node
 alias n="node"
-# nvm settings
-# export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
 # alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
-
-# ruby
-alias r="ruby"
-# rbenv settings
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
 
 # GOPATH settings
 export GOPATH=/Users/Chen/GoProjects

@@ -1,8 +1,5 @@
 # dotfiles
 
-## bash
-* bash_profile    // bash 的配置
-
 ## zsh
 * zshrc    // zsh 的配置    
 
@@ -21,4 +18,8 @@
 * gitconfig    // git 配置
 * gitingore_global    // gitignore 用的 [karan/joe](https://github.com/karan/joe) 生成
 
+
+## Blog
+* newblog.sh    // 新文章
+* publishblog.sh    // 更新博客
 
