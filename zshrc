@@ -77,6 +77,10 @@ fi
 
 # zsh-completion
 fpath=(/usr/local/share/zsh-completions $fpath)
+ 
+# hub-completion
+fpath=(~/.zsh/completions $fpath) 
+autoload -U compinit && compinit
 
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
