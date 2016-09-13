@@ -77,9 +77,9 @@ fi
 
 # zsh-completion
 fpath=(/usr/local/share/zsh-completions $fpath)
- 
+
 # hub-completion
-fpath=(~/.zsh/completions $fpath) 
+fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
 # zsh-syntax-highlighting
@@ -91,10 +91,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 # autojump settings
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# fuck settings 
+# thefuck settings
 eval "$(thefuck --alias)"
-# You can use whatever you want as an alias, like for Mondays:
-eval "$(thefuck --alias FUCK)"
 
 # python
 alias p="python"
@@ -122,15 +120,6 @@ alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias pcli="pgcli"
 
-# mysql alias quick command
-alias mysqlstart="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server start"
-alias mysqlstop="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server stop"
-alias mysqlrestart="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server restart"
-alias mysqlreload="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server reload"
-alias mysqlforcereload="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server force-reload"
-alias mysqlstatus="sudo /usr/local/Cellar/mysql/5.7.14/bin/mysql.server status"
-alias mcli="mycli"
-
 # Redis alias quick command
 alias redisstart="redis-server"
 alias rediscli="redis-cli"
@@ -152,7 +141,8 @@ alias publishblog="sh ~/Documents/BreakWire/publishblog.sh"
 alias startpelican="make devserver"
 alias stoppelican="sh ~/Documents/BreakWire/develop_server.sh stop"
 
-# alias 
+# alias
+alias l="ls -G"
 alias ls="ls -G"
 alias ll="ls -lG"
 alias la="ls -aG"
@@ -164,8 +154,6 @@ alias cls="clear"
 alias cd1="cd .."
 alias cd2="cd ../.."
 alias cd3="cd ../../.."
-alias cd4="cd ../../../.."
-alias cd5="cd ../../../../.."
 
 # alias mkdir and cd in it
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
