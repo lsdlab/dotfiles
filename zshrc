@@ -78,10 +78,6 @@ fi
 # zsh-completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# hub-completion
-fpath=(~/.zsh/completions $fpath)
-autoload -U compinit && compinit
-
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -112,8 +108,12 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
+
 # GOPATH settings
-export GOPATH=/Users/Chen/GoProjects
+export GOPATH=/usr/local/lib/go
 
 # PostgreSQL alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -122,6 +122,7 @@ alias pcli="pgcli"
 
 # Redis alias quick command
 alias redisstart="redis-server"
+alias redisstop="redis-cli shutdown"
 alias rediscli="redis-cli"
 
 # MongoDB settings
@@ -129,7 +130,7 @@ export MONGO_PATH=/usr/local/mongodb
 export PATH=$PATH:$MONGO_PATH/bin
 alias mongodbstart="mongod"
 alias mongodbcli="mongo"
-alias adminmongo="cd ~/tools/adminMongo && npm start"
+alias am="cd ~/tools/adminMongo && npm start"
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
@@ -171,3 +172,5 @@ alias vim="mvim"
 #[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
 #[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
 #source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH="~/.yarn/bin:$PATH"
