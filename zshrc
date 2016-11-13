@@ -94,6 +94,7 @@ eval "$(thefuck --alias)"
 alias p="python"
 alias p2="python2"
 alias p3="python3"
+alias notebook="jupyter notebook --ip 192.168.2.2"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 # pyenv settings
@@ -124,13 +125,6 @@ alias pcli="pgcli"
 alias redisstart="redis-server"
 alias redisstop="redis-cli shutdown"
 alias rediscli="redis-cli"
-
-# MongoDB settings
-export MONGO_PATH=/usr/local/mongodb
-export PATH=$PATH:$MONGO_PATH/bin
-alias mongodbstart="mongod"
-alias mongodbcli="mongo"
-alias am="cd ~/tools/adminMongo && npm start"
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
