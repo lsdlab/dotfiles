@@ -92,8 +92,6 @@ eval "$(thefuck --alias)"
 
 # python
 alias p="python"
-alias p2="python2"
-alias p3="python3"
 alias notebook="jupyter notebook --ip 192.168.2.2"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
@@ -109,6 +107,8 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
+# irb
+alias irb="irb --simple-prompt"
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
