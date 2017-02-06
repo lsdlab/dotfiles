@@ -46,7 +46,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew brew-cask django git git-extras git-flow git-prompt github gitignore history heroku httpie iwhois marked2 nmap npm node osx pep8 pip pod postgres python pylint redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp vundle vi-mode xcode zsh_reload)
+plugins=(autojump autopep8 brew django git git-flow git-prompt github gitignore history httpie iwhois marked2 nmap npm node osx pep8 pip pod postgres python pylint pyenv redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp vundle vi-mode xcode zsh_reload yarn)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
@@ -160,11 +160,8 @@ alias cat="lolcat"
 alias vi="mvim"
 alias vim="mvim"
 
-# pip save settings
-#export WORKON_HOME=~/.virtualenvs
-#[ -f ~/.pipsave_cd ] && source ~/.pipsave_cd # pipsave_line
-#[ -f ~/.pipsave_pip ] && source ~/.pipsave_pip # pipsave_line
-#[ -f ~/.pipsave_pip3 ] && source ~/.pipsave_pip3 # pipsave_line
-#source /usr/local/bin/virtualenvwrapper.sh
-
+# yarn
 export PATH="~/.yarn/bin:$PATH"
+
+# alias for git-blame-someone-else
+alias git-blame-else="/usr/local/bin/git-blame-someone-else"
