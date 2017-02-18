@@ -117,9 +117,8 @@ eval "$(rbenv init -)"
 export GOPATH=/usr/local/lib/go
 
 # PostgreSQL alias quick command
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-alias pcli="pgcli"
+alias pgstart="pg_ctl -D /usr/local/var/postgres start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
 
 # Redis alias quick command
 alias redisstart="redis-server"
@@ -165,3 +164,6 @@ export PATH="~/.yarn/bin:$PATH"
 
 # alias for git-blame-someone-else
 alias git-blame-else="/usr/local/bin/git-blame-someone-else"
+
+# rm-protection
+alias rm="rm-p"
