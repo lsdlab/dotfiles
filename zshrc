@@ -107,18 +107,16 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
 
-# irb
-alias irb="irb --simple-prompt"
-# rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-eval "$(rbenv init -)"
-
 # GOPATH settings
 export GOPATH=/usr/local/lib/go
 
 # PostgreSQL alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
+
+# MySQL alias quick command
+alias mystart="mysql.server start"
+alias mystop="mysql.server stop"
 
 # Redis alias quick command
 alias redisstart="redis-server"
@@ -164,6 +162,3 @@ export PATH="~/.yarn/bin:$PATH"
 
 # alias for git-blame-someone-else
 alias git-blame-else="/usr/local/bin/git-blame-someone-else"
-
-# rm-protection
-alias rm="rm-p"
