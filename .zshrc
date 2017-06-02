@@ -136,6 +136,9 @@ alias stoppelican="make stopserver"
 # alias for quick work site update
 alias publishsite="cd ~/Documents/breakwire_xyz; sh publish.sh"
 
+# alias for mkdocs
+alias mkdocsserve="mkdocs serve -a 0.0.0.0:8001"
+
 # alias
 alias l="ls -G"
 alias ls="ls -G"
