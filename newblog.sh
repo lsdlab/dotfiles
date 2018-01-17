@@ -6,14 +6,14 @@ fileName=`date "+%Y-%m-%d"`
 currentTime=`date "+%Y-%m-%d %H:%M:%S"`
 
 cat>${fileName}.md<<EOF
-Title:
+Title: 
 Date: ${currentTime}
 Modified: ${currentTime}
-Category:
-Tags:
-Slug:
+Category: 
+Tags: 
+Slug: 
 Authors: Chen Jian
-Summary:
+Summary: 
 EOF
 
 echo "Create ~/Document/BreakWire/content/${fileName}.md"
