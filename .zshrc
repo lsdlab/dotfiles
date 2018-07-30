@@ -70,13 +70,15 @@ fi
 #  ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-#  Set personal aliases, overriding those provided by oh-my-zsh libs,
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
 # zsh-completion
-fpath=(/usr/local/share/zsh-completions $fpath)
+plugins=(… zsh-completions)
+autoload -U compinit && compinit
+fpath=(~/.zsh/completions $fpath) 
 
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -91,7 +93,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 eval "$(thefuck --alias)"
 
 # python
-alias p="python"
+alias p="ipython"
 alias notebook="jupyter notebook"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
@@ -99,24 +101,12 @@ export PYTHONDONTWRITEBYTECODE=x
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# node
-#alias n="node"
-# alias for cnpm
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.cnpmrc"
-
 # GOPATH settings
-export GOPATH=/usr/local/lib/go
+export GOPATH=$HOME/go 
 
 # PostgreSQL alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
-
-# MySQL alias quick command
-alias mystart="mysql.server start"
-alias mystop="mysql.server stop"
 
 # Redis alias quick command
 alias redisstart="redis-server"
@@ -128,8 +118,8 @@ alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool tru
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false"
 
 # alias for quick blog
-alias newblog="cd ~/Documents/BreakWire; sh newblog.sh; cd -"
-alias publishblog="cd ~/Documents/BreakWire; sh publishblog.sh; cd -"
+alias newblog="sh ~/Documents/BreakWire/newblog.sh;"
+alias publishblog="sh ~/Documents/BreakWire/publishblog.sh;"
 alias startpelican="make devserver"
 alias stoppelican="make stopserver"
 
@@ -137,7 +127,7 @@ alias stoppelican="make stopserver"
 alias publishsite="cd ~/Documents/breakwire_xyz; sh publish.sh"
 
 # alias for mkdocs
-alias mkdocsserve="mkdocs serve -a 0.0.0.0:8001"
+alias mkdocsserve="mkdocs serve -a localhost:8001"
 alias mkdocsdeploy="mkdocs gh-deploy"
 
 # alias
@@ -165,9 +155,6 @@ alias cat="lolcat"
 alias vi="mvim"
 alias vim="mvim"
 
-# yarn
-export PATH="~/.yarn/bin:$PATH"
-
 # alias for git-blame-someone-else
 alias git-blame-else="/usr/local/bin/git-blame-someone-else"
 
@@ -175,9 +162,21 @@ alias git-blame-else="/usr/local/bin/git-blame-someone-else"
 alias gst="git status -sb"
 alias gitlog="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# alias for wc -l du -h
+alias wcl="wc -l"
+alias dush="du -sh"
+
+# alias for brew update
+alias brewupdate="brew update && brew upgrade && brew cleanup && brew prune"
+
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+alias djrun="./manage.py runserver_plus"
+alias djshell="./manage.py shell_plus"
+
+export FLASK_APP=autoapp.py
+export FLASK_DEBUG=1
+
+alias mystart="mysql.server start"
+alias mystop="mysql.server stop"
