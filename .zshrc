@@ -9,13 +9,13 @@ ZSH_THEME="powerline"
 POWERLINE_HIDE_HOST_NAME="true"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 
 #  Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
 #  Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 #  Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -46,7 +46,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump autopep8 brew django git git-flow git-prompt github gitignore history httpie iwhois marked2 nmap npm node osx pep8 pip pod postgres python pylint pyenv redis-cli rsync sublime sudo supervisor thefuck tmux terminalapp vundle vi-mode xcode zsh_reload yarn)
+plugins=(git autojump autopep8 brew django httpie osx pip postgres python pyenv sublime sudo thefuck tmux xcode)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
@@ -76,9 +76,7 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # zsh-completion
-plugins=(… zsh-completions)
-autoload -U compinit && compinit
-fpath=(~/.zsh/completions $fpath) 
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -102,7 +100,10 @@ export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # GOPATH settings
-export GOPATH=$HOME/go 
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 # PostgreSQL alias quick command
 alias pgstart="pg_ctl -D /usr/local/var/postgres start"
@@ -123,18 +124,12 @@ alias publishblog="sh ~/Documents/BreakWire/publishblog.sh;"
 alias startpelican="make devserver"
 alias stoppelican="make stopserver"
 
-# alias for quick work site update
-alias publishsite="cd ~/Documents/breakwire_xyz; sh publish.sh"
-
 # alias for mkdocs
 alias mkdocsserve="mkdocs serve -a localhost:8001"
 alias mkdocsdeploy="mkdocs gh-deploy"
 
 # alias
-alias l="ls -G"
-alias ls="ls -G"
 alias ll="ls -lG"
-alias la="ls -aG"
 alias lal="ls -alG"
 alias grep="grep --color=auto"
 alias cls="clear"
@@ -148,13 +143,6 @@ alias cd3="cd ../../.."
 # alias mkdir and cd in it
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
-# alias lolcat(a Ruby tool) to default cat
-alias cat="lolcat"
-
-# alias macvim replace vim
-alias vi="mvim"
-alias vim="mvim"
-
 # alias for git-blame-someone-else
 alias git-blame-else="/usr/local/bin/git-blame-someone-else"
 
@@ -166,17 +154,10 @@ alias gitlog="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 alias wcl="wc -l"
 alias dush="du -sh"
 
-# alias for brew update
-alias brewupdate="brew update && brew upgrade && brew cleanup && brew prune"
-
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="/usr/local/opt/cython/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
-alias djrun="./manage.py runserver_plus"
-alias djshell="./manage.py shell_plus"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export FLASK_APP=autoapp.py
-export FLASK_DEBUG=1
-
-alias mystart="mysql.server start"
-alias mystop="mysql.server stop"

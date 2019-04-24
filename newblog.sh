@@ -1,19 +1,21 @@
 #! /bin/zsh
 
-cd content/
+cd ~/Documents/breakwire/content
 
 fileName=`date "+%Y-%m-%d"`
 currentTime=`date "+%Y-%m-%d %H:%M:%S"`
 
 cat>${fileName}.md<<EOF
-Title: 
+Title:
 Date: ${currentTime}
 Modified: ${currentTime}
-Category: 
-Tags: 
-Slug: 
-Authors: Chen Jian
-Summary: 
+Category:
+Tags:
+Slug:
+Authors: JC
+Summary:
+Status: draft
+
 EOF
 
-echo "Create ~/Document/BreakWire/content/${fileName}.md"
+echo "Create ~/Document/breakwire/content/${fileName}.md"
