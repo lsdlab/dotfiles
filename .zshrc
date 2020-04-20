@@ -9,13 +9,13 @@ ZSH_THEME="powerline"
 POWERLINE_HIDE_HOST_NAME="true"
 
 # Uncomment the following line to use case-sensitive completion.
-#CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 #  Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
 #  Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=13
+# export UPDATE_ZSH_DAYS=13
 
 #  Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -46,7 +46,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump autopep8 brew django httpie osx pip postgres python pyenv sublime sudo thefuck tmux xcode)
+plugins=(wakatime autojump autopep8 brew django git git-flow git-prompt github gitignore history httpie marked2 nmap npm node osx pep8 pip pod postgres python pylint pyenv redis-cli rsync sudo supervisor thefuck tmux vundle vi-mode xcode zsh_reload yarn)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
@@ -70,7 +70,7 @@ fi
 #  ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
+#  Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
@@ -91,49 +91,37 @@ export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 eval "$(thefuck --alias)"
 
 # python
-alias p="ipython"
-alias notebook="jupyter notebook"
 # no .pyc
 export PYTHONDONTWRITEBYTECODE=x
 # pyenv settings
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
+# node
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
 # GOPATH settings
-export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+export GOPATH=/usr/local/lib/go
 
-# PostgreSQL alias quick command
-alias pgstart="pg_ctl -D /usr/local/var/postgres start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
-
-# Redis alias quick command
-alias redisstart="redis-server"
-alias redisstop="redis-cli shutdown"
-alias rediscli="redis-cli"
+# python
+alias python="python3"
+alias pip="pip3"
 
 # display hidden files alias quick command
 alias displayhidden="defaults write com.apple.finder AppleShowAllFiles -bool true"
 alias hidehidden="defaults write com.apple.finder AppleShowAllFiles -bool false"
 
-# alias for quick blog
-alias newblog="sh ~/Documents/BreakWire/newblog.sh;"
-alias publishblog="sh ~/Documents/BreakWire/publishblog.sh;"
-alias startpelican="make devserver"
-alias stoppelican="make stopserver"
-
-# alias for mkdocs
-alias mkdocsserve="mkdocs serve -a localhost:8001"
-alias mkdocsdeploy="mkdocs gh-deploy"
-
 # alias
+alias l="ls -G"
+alias ls="ls -G"
 alias ll="ls -lG"
+alias la="ls -aG"
 alias lal="ls -alG"
 alias grep="grep --color=auto"
 alias cls="clear"
-alias lc='colorls -r'
 
 # alias cd1 cd2...
 alias cd1="cd .."
@@ -146,18 +134,19 @@ function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 # alias for git-blame-someone-else
 alias git-blame-else="/usr/local/bin/git-blame-someone-else"
 
-# alias for git
-alias gst="git status -sb"
-alias gitlog="git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 
-# alias for wc -l du -h
-alias wcl="wc -l"
-alias dush="du -sh"
-
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH="/usr/local/opt/cython/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+# Created by mirror-config-china
+export IOJS_ORG_MIRROR=https://npm.taobao.org/mirrors/iojs
+export NODIST_IOJS_MIRROR=https://npm.taobao.org/mirrors/iojs
+export NVM_IOJS_ORG_MIRROR=https://npm.taobao.org/mirrors/iojs
+export NVMW_IOJS_ORG_MIRROR=https://npm.taobao.org/mirrors/iojs
+export NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export NODIST_NODE_MIRROR=https://npm.taobao.org/mirrors/node
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export NVMW_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+export NVMW_NPM_MIRROR=https://npm.taobao.org/mirrors/npm
+# End of mirror-config-china
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+autoload -Uz compinit && compinit

@@ -1,0 +1,7 @@
+[user]
+	name = Chen Jian
+	email = lsdlab@icloud.com
+[mergetool]
+	keepBackup = true
+[credential]
+	helper = store
