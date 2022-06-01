@@ -1,35 +1,7 @@
 [user]
 	name = Chen Jian
 	email = lsdlab@icloud.com
-[core]
-	editor = subl
-	excludesfile = /Users/Chen/.gitignore_global
-	quotepath = false
-[color]
-	status = auto
-	branch = auto
-	interactive = auto
-	diff = auto
-	ui = auto
-[push]
-	default = simple
-[alias]
-	branches = !legit branches
-	graft = !legit graft
-	harvest = !legit harvest
-	publish = !legit publish
-	unpublish = !legit unpublish
-	sprout = !legit sprout
-	sync = !legit sync
-	switch = !legit switch
-	resync = !legit resync
-[filter "lfs"]
-	smudge = git-lfs smudge %f
-	required = true
-	clean = git-lfs clean %f
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[mergetool]
+	keepBackup = true
+[credential]
+	helper = store
